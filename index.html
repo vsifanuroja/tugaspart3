@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>QUEEN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f5f5f5, #ff9a9e);
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #ff69b4;
+        }
+
+        .gallery {
+            width: 100%;
+            overflow: hidden;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            width: calc(33.33% - 20px);
+            float: left;
+            margin: 10px;
+            position: relative;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 3px solid #ffc1e0;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .caption {
+            opacity: 1;
+        }
+
+        .gallery::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .gallery-item {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .gallery-item {
+                width: calc(50% - 15px);
+                margin: 7px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .gallery-item {
+                width: calc(100% - 10px);
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>beauty of nature’s canvas</h1>
+    </header>
+
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="fotod.jpeg" alt="Image 1">
+            <div class="caption">The beauty of a flower is a joy forever</div>
+        </div>
+        <div class="gallery-item">
+            <img src="fotoempat.jpeg" alt="Image 2">
+            <div class="caption">A picture-perfect paradise</div>
+        </div>
+        <div class="gallery-item">
+            <img src="fotolim.jpeg" alt="Image 3">
+            <div class="caption">Nature’s artistry at its finest</div>
+        </div>
+        <div class="gallery-item">
+            <img src="fototiga.jpeg" alt="Image 4">
+            <div class="caption">Every flower blooms in its own time.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="fotosebela.jpeg" alt="Image 5">
+            <div class="caption">Every flower must grow through dirt</div>
+        </div>
+        <div class="gallery-item">
+            <img src="fotoo.jpeg" alt="Image 6">
+            <div class="caption">Endless beauty</div>
+        </div>
+    </section>
+</body>
+
+</html>
